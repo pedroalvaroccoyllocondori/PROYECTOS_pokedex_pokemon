@@ -1,0 +1,191 @@
+@import url("variables.css");
+
+@font-face {
+  font-family: 'pokemon';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('./fuentes/Pokemon\ Solid.ttf');
+}
+
+
+/*--[ Parametros Generales ]--*/
+body,html {
+    
+    height: 100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    font-family: 'pokemon';
+    -webkit-text-stroke: .5px black;
+
+  }
+  
+  body{
+    background-image: var(--fondo_pokeapi);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+  }
+
+
+
+.logo{
+  width: 30vw;
+  display: block;
+  z-index: 5;
+  /* border: 1px solid red; */
+  position: fixed;
+  top: 0;
+  height: 10rem;
+
+}
+.conteiner_div{
+  /* position: absolute;
+  top: 10rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.span{
+  border: 1px solid rgb(48, 28, 28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  div{
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  
+  .Flotante_contenedor{
+    visibility: hidden;
+  }
+  /*--[ Gran Contenedor ]--*/
+  .contenedorApi{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position:relative;
+    top: 10em;
+    gap: 10px;
+    width: 80vw;
+    /* padding: 10px;
+    margin:20px; */
+    /* border: 1px solid blue; */
+
+
+}
+
+/*--[ La Carta y Contenido ]--*/
+.cartaContenedor{
+
+  border: 1px solid rgb(200, 189, 189);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  color: aliceblue;
+}
+.cartaName{
+    margin-top: auto;
+    margin-bottom: auto;
+    /* border: 1px solid blue; */
+
+}
+.cartaContenedorImg{
+  /* border: 1px solid blue; */
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.cartaImg{
+  filter:drop-shadow(4px 2px 1px rgb(0, 0, 0)) ;
+  padding: 15px;
+  border: 1px solid rgb(94, 93, 93);
+  border-radius: .5rem;
+}
+
+.cartaContenedor:hover{
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.85 );
+  /* position: absolute; */
+}
+
+
+/*--[ El contenedor Flotante ]--*/
+
+.Flotante_contenedor{
+  backdrop-filter: blur(5px);
+
+  height: 100%;
+  width: 100%;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.Flotante_tarjeta{
+
+  max-width: 95vw;
+  width: 400px;
+  /* max-height: 90vh; */
+  overflow: hidden;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+  flex: 1 1;
+  background-color: rgba(240, 248, 255, 0.298);
+  border: 0;
+}
+
+.Flotante_titulo{
+  background-color: rgba(88, 56, 56, 0.879);
+  text-align: center;
+  font-size: 2rem;
+  align-self: stretch;
+  border-radius:  0px;
+  color: azure;
+}
+
+.Flotante_imagen{
+/* max-width: 75%; */
+margin: 20px;
+
+}
+
+.Flotante_img{
+  filter: drop-shadow(8px 3px 3px black);
+  width: 100%;
+  object-fit: cover;
+  /* padding: 10px; */
+}
+
+.Flotante_texto{
+  font-family: 'pokemon';
+  color: aliceblue;
+  text-align: center;
+  margin: auto 10px;
+  margin-bottom: 15px;
+}
+
